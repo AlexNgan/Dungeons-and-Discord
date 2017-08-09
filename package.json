@@ -1,0 +1,23 @@
+{
+  "name": "Dungeons-and-Discord",
+  "version": "1.0.0",
+  "description": "Code for a bot to help run DnD campaigns on a Discord server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mortyyy/Dungeons-and-Discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mortyyy/Dungeons-and-Discord/issues"
+  },
+  "homepage": "https://github.com/Mortyyy/Dungeons-and-Discord#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
