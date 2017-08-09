@@ -16,5 +16,5 @@ bot.on('message', msg => {
     msg.reply('Pong!');
   }
 });
-
-bot.login('token');
+bot.login(MzQ0OTQ3ODg2MTAzOTg2MTc4.DG0J5w.5du9caHyha1iSk10FO1uA8dIb64);
+//bot.login(bot.config.token);
