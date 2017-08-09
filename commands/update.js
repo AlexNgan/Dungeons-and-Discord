@@ -43,12 +43,12 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: ['upd', 'Update', 'upd8'],
-    permLevel: 10
+    permLevel: 5
 };
 
 //Describes command when prompted.
 exports.help = {
     name: 'update',
     usage: 'update',
-    description: 'Pulls new changes from Github and restarts.'
+    description: 'Pulls new changes from Github and restarts the bot.'
 };
