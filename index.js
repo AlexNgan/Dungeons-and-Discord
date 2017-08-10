@@ -11,7 +11,7 @@ const fs = require("fs");
 
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
-  client.user.setGame(`with ${client.users.size} friends!`);
+  bot.user.setGame(`with ${bot.users.size} friends!`);
   //console.log(`Ready to serve on ${client.guilds.size} servers, for ${client.users.size} users.`);
 });
 
