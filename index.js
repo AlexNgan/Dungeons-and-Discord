@@ -22,4 +22,4 @@ bot.on('message', msg => {
   }
 });
 
-bot.login(bot.config.token);  //Logs in bot by fetching token from config file.
+bot.login(config.token);  //Logs in bot by fetching token from config file.
