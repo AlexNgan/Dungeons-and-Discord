@@ -28,13 +28,19 @@ module.exports = (bot) => {
         }
         try {
           //Boss birbs.
+<<<<<<< HEAD
             let bossRole = message.guild.roles.find('name', bot.config.bossRoleName);
             if (bossRole && message.member.roles.has(bossRole.id)) permlvl = 3;
+=======
+            let repRole = message.guild.roles.find('name', bot.config.bossRoleName);
+            if (repRole && message.member.roles.has(bossRole.id)) permlvl = 3;
+>>>>>>> 6d0bd0e059409c1e02589882cf847ecb02ddb521
         } catch (e) {
             console.warn("bossRoleName not found. Skipping Boss (level 3) check");
         }
         try {
           //DM level.
+<<<<<<< HEAD
             let DMRole = message.guild.roles.find('name', bot.config.DMRoleName);
             if (DMRole && message.member.roles.has(DMRole.id)) permlvl = 4;
         } catch (e) {
@@ -47,6 +53,14 @@ module.exports = (bot) => {
         //Server owner.
         if (message.author.id === message.guild.owner.id) permlvl = 5;
 
+=======
+            let adminRole = message.guild.roles.find('name', bot.config.DMRoleName);
+            if (adminRole && message.member.roles.has(DMRole.id)) permlvl = 4;
+        } catch (e) {
+            console.warn("DMRoleName not found. Skipping DM (level 4) check");
+        }
+        if (message.author.id === message.guild.owner.id) permlvl = 5;
+>>>>>>> 6d0bd0e059409c1e02589882cf847ecb02ddb521
         return permlvl;
     };
     bot.log = (type, msg, title) => {

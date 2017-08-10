@@ -18,5 +18,10 @@ bot.on('message', msg => {
     msg.reply('Pong!');
   }
 });
+<<<<<<< HEAD
 
 bot.login(bot.config.token);
+=======
+bot.login(MzQ0OTQ3ODg2MTAzOTg2MTc4.DG0J5w.5du9caHyha1iSk10FO1uA8dIb64);
+//bot.login(bot.config.token);
+>>>>>>> 6d0bd0e059409c1e02589882cf847ecb02ddb521
