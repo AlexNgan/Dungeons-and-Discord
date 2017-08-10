@@ -25,7 +25,7 @@ bot.on('message', msg => {
 
   //KILL PROCESSES. ONLY BOT OWNER CAN RUN.
   if ((msg.content.startsWith(config.prefix) + 'kill' && msg.author.id !== config.ownerID) {
-    process.abort();
+    process.exit();
     msg.reply("Process killed.");
   }
 
