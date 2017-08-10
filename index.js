@@ -16,7 +16,7 @@ bot.on('ready', () => {
 //Whenever a message event occurs.
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
-  if ((!msg.content.startsWith(config.prefix)||msg.author.bot) { return; }
+  if (!msg.content.startsWith(config.prefix)||msg.author.bot) { return; }
 
   //Ping pong.
   if(msg.content.startsWith(config.prefix + "ping")) {
