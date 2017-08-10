@@ -12,5 +12,6 @@ bot.on('message', msg => {
   if(message.content.equals("rady") == true){
     //Generates random number between 0 and the last array index.
     var number = Math.floor(Math.random()*(lennyList.length - 1));
-    msg.reply();
+    msg.reply(lennyList[number]);
   }
+});

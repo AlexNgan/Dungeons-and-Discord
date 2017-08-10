@@ -6,6 +6,8 @@
   This command updates the bot to the latest version on GitHub.
 */
 
+//if(message.author.id !== config.ownerID) return;
+
 const child_process = require('child_process');
 const Discord = require("discord.js");
 exports.run = (bot, message, args) => {
