@@ -18,27 +18,30 @@ bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
   if (!msg.content.startsWith(config.prefix)||msg.author.bot) { return; }
 
+  if(msg.content.equals("hello dnd bot")==true){
+    msg.reply("Hello, " + msg.author.id);
+  }
+
   //Ping pong.
   if(msg.content.startsWith(config.prefix + "ping")) {
     msg.reply('Pong!');
   }
 
   //KILL PROCESSES. ONLY BOT OWNER CAN RUN.
-  if (msg.content.startsWith(config.prefix) + 'kill' && msg.author.id !== config.ownerID) {
+  if (msg.content.startsWith(config.prefix) + 'kill' && msg.author.id == config.ownerID) {
     process.exit();
     msg.reply("Process killed.");
   }
 
-  //Command to troll RADYCAT.
-  var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
-
   if(msg.content.equals("rady") == true){
+    //Command to troll RADYCAT.
+    var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
+
     //Generates random number between 0 and the last array index.
     var number = Math.floor(Math.random()*(lennyList.length - 1));
     msg.reply(lennyList[number]);
   }
-
-  else{return;}
+  //else{return;}
 });
 
 bot.login(config.token);  //Logs in bot by fetching token from config file.
