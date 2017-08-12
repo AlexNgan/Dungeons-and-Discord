@@ -32,6 +32,14 @@ bot.on('message', msg => {
     msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
   }
 
+  //To troll a friend.
+  var lennyList = ["( ͡° ͜ʖ ͡°)","(° 3 °)","͡° ͜ʖ ͡–","┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴","ᕕ( ͡° ͜ʖ ͡°)ᕗ"];
+  if(msg.content === "rady"){
+    //Generates random number between 0 and the last array index.
+    var number = Math.floor(Math.random()*(lennyList.length));
+    msg.channel.send(lennyList[number]);
+  }
+
 //---------- WELCOME TO DICE CODE ----------//
 
   if(msg.content === ".d2"){msg.reply(roll(1,2));}
