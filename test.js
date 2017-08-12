@@ -28,10 +28,12 @@ bot.on('message', msg => {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
 
+/*
   if(msg.content === ".kill" && msg.author.id == config.ownerID){
     msg.reply("Night, night!");
     process.exit();
   }
+*/
 
   //Displays versioning.
   if(msg.content === ".version"){
@@ -71,7 +73,13 @@ bot.on('message', msg => {
 function roll(min, max){
   min = Math.ceil(min);
   max = Math.floor(max);
-  return "you've rolled " + (Math.floor(Math.random() * (max - min + 1)) + min);
+  result = (Math.floor(Math.random() * (max - min + 1)) + min;
+
+  if(max == result){
+    flair = ":tada:"
+  }
+  
+  return "you've rolled " + result + flair;
 }
 
 /*
