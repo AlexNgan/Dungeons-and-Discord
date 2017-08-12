@@ -14,7 +14,7 @@ var characters;
 
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
-  bot.user.setGame(`TEST SCRIPT with ${bot.users.size} friends!`);
+  bot.user.setGame(`TEST SCRIPT with ${guild.memberCount} friends!`);
 });
 
 //Message reply handled here.
@@ -28,10 +28,10 @@ bot.on('message', msg => {
 
 //TEST ZONE.
 var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
-  if(msg.content.equals(".rady") == true && !msg.author.bot){
+  if(msg.content=== "rady"){
   //Generates random number between 0 and the last array index.
   var number = Math.floor(Math.random()*(lennyList.length - 1));
-  msg.reply(lennyList[number]);
+  msg.send(lennyList[number]);
 }
 //END TEST ZONE.
 
