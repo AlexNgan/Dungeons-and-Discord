@@ -12,7 +12,8 @@ const fs = require("fs");
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
   bot.user.setGame(`TEST SCRIPT with ${bot.users.size} friends!`);
-  bot.sendMessage('344950794912530432', "Dnd Bot, reporting for duty.");
+  //Channel ID, STRING.
+  bot.message('344950794912530432', "Dnd Bot, reporting for duty.");
 });
 
 bot.on('message', msg => {
