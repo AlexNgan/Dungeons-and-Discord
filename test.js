@@ -39,10 +39,10 @@ bot.on('message', msg => {
   }
 
 //---------- WELCOME TO DICE CODE ----------//
- 
+
   if(msg.content === ".d2"){msg.reply(roll(1,2));}
 
-  if(msg.content === ".3"){msg.reply(roll(1,3));}
+  if(msg.content === ".d3"){msg.reply(roll(1,3));}
 
   if(msg.content === ".d4"){msg.reply(roll(1,4));}
 
@@ -69,8 +69,8 @@ bot.on('message', msg => {
 });
 
 function roll(min, max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  //min = Math.ceil(min);
+//  max = Math.floor(max);
   return "You've rolled " + Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
