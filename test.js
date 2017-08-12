@@ -26,27 +26,14 @@ bot.on('message', msg => {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
 
-//---------- WELCOME TO DICE CODE ----------//
-
-  if(msg.content === ".d2"){msg.reply(roll(1,2));}
-
-  if(msg.content === ".d3"){msg.reply(roll(1,3));}
-
-  if(msg.content === ".d4"){msg.reply(roll(1,4));}
-
-  if(msg.content === ".d6"){msg.reply(roll(1,6));}
-
-  if(msg.content === ".d8"){msg.reply("wow a date, eh? " + roll(1,8));}
-
-  if(msg.content === ".d10"){msg.reply(roll(1,10));}
-
-  if(msg.content === ".d12"){msg.reply(roll(1,12));}
-
-  if(msg.content === ".d20"){msg.reply(roll(1,20));}
-
-  if(msg.content === ".d100"){msg.reply(roll(1,100));}
-
-  //--------------- END DICE ----------------//
+//TEST ZONE.
+var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
+  if(msg.content.equals(".rady") == true && !msg.author.bot){
+  //Generates random number between 0 and the last array index.
+  var number = Math.floor(Math.random()*(lennyList.length - 1));
+  msg.reply(lennyList[number]);
+}
+//END TEST ZONE.
 
   //Command to register new character.
   if(msg.content === ".newcharacter"){
