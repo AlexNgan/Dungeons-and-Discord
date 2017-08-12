@@ -73,12 +73,12 @@ bot.on('message', msg => {
 function roll(min, max){
   min = Math.ceil(min);
   max = Math.floor(max);
-  result = (Math.floor(Math.random() * (max - min + 1)) + min;
+  result = Math.floor(Math.random() * (max - min + 1)) + min;
 
   if(max == result){
     flair = ":tada:"
   }
-  
+
   return "you've rolled " + result + flair;
 }
 
