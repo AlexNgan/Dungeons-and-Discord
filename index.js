@@ -27,13 +27,6 @@ bot.on('message', msg => {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
 
-/*
-  if(msg.content === ".kill" && msg.author.id == config.ownerID){
-    msg.reply("Night, night!");
-    process.exit();
-  }
-*/
-
   //Displays versioning.
   if(msg.content === ".version"){
     msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
@@ -84,13 +77,5 @@ function roll(min, max){
 
   return "you've rolled " + result + flair;
 }
-
-
-/*
-  //New character function.
-  function makeNewCharacter(){
-
-  }
-*/
 
 bot.login(config.token);  //Logs in bot by fetching token from config file.
