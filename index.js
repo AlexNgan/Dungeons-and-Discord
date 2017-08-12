@@ -69,6 +69,7 @@ bot.on('message', msg => {
   else{return;}
 });
 
+//Called by dice code.
 function roll(min, max){
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -76,11 +77,14 @@ function roll(min, max){
   result = Math.floor(Math.random() * (max - min + 1)) + min;
 
   if(max === result){
-    flair = " :tada:";
-  }
+    flair = ". :tada:";
+  } else if (result == 1) {
+    flair = ". Get rekt, scrub. :poop:";
+  } else{ return; }
 
   return "you've rolled " + result + flair;
 }
+
 
 /*
   //New character function.
