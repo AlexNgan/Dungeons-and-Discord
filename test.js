@@ -28,7 +28,7 @@ bot.on('message', msg => {
 
 //TEST ZONE.
 var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
-  if(msg.content.equals(".rady") == true && !msg.author.bot){
+  if(msg.content=== "rady"){
   //Generates random number between 0 and the last array index.
   var number = Math.floor(Math.random()*(lennyList.length - 1));
   msg.reply(lennyList[number]);
