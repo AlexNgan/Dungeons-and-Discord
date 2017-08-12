@@ -25,7 +25,7 @@ bot.on('message', msg => {
   if(msg.author.bot){return;}
   //PING PONG.
   if (msg.content === ".ping") {
-    msg.reply("Pong! Your ping to my server is " + bot.ping + " milliseconds.");
+    msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
 
   if(msg.content === ".kill" && msg.author.id == config.ownerID){
@@ -38,6 +38,28 @@ bot.on('message', msg => {
     msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
   }
 
+//---------- WELCOME TO DICE CODE ----------//
+ 
+  if(msg.content === ".d2"){msg.reply(roll(1,2));}
+
+  if(msg.content === ".3"){msg.reply(roll(1,3));}
+
+  if(msg.content === ".d4"){msg.reply(roll(1,4));}
+
+  if(msg.content === ".d6"){msg.reply(roll(1,6));}
+
+  if(msg.content === ".d8"){msg.reply("wow a date, eh? " + roll(1,8));}
+
+  if(msg.content === ".d10"){msg.reply(roll(1,10));}
+
+  if(msg.content === ".d12"){msg.reply(roll(1,12));}
+
+  if(msg.content === ".d20"){msg.reply(roll(1,20));}
+
+  if(msg.content === ".d100"){msg.reply(roll(1,100));}
+
+  //--------------- END DICE ----------------//
+
   //Command to register new character.
   if(msg.content === ".newcharacter"){
     makeNewCharacter();
@@ -45,6 +67,12 @@ bot.on('message', msg => {
 
   else{return;}
 });
+
+function roll(min, max){
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return "You've rolled " + Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 /*
   //New character function.
