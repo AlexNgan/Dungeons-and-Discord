@@ -17,8 +17,6 @@ bot.on('ready', () => {
   bot.user.setGame(`TEST SCRIPT with ${bot.users.size} friends!`);
 });
 
-console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
-
 //Message reply handled here.
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
@@ -26,18 +24,6 @@ bot.on('message', msg => {
   //PING PONG.
   if (msg.content === ".ping") {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
-  }
-
-/*
-  if(msg.content === ".kill" && msg.author.id == config.ownerID){
-    msg.reply("Night, night!");
-    process.exit();
-  }
-*/
-
-  //Displays versioning.
-  if(msg.content === ".version"){
-    msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
   }
 
 //---------- WELCOME TO DICE CODE ----------//
@@ -70,6 +56,7 @@ bot.on('message', msg => {
   else{return;}
 });
 
+//Called by dice code.
 function roll(min, max){
   min = Math.ceil(min);
   max = Math.floor(max);
