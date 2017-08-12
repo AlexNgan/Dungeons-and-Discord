@@ -13,12 +13,15 @@ const fs = require("fs");
 bot.on('ready', () => {
   bot.user.setGame(`TEST SCRIPT with ${bot.users.size} friends!`);
   //Channel ID, STRING.
-  bot.channel.send("Dnd Bot, reporting for duty.");
+  //bot.channel.send("Dnd Bot, reporting for duty.");
 });
+
+//Init.
+console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
 
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
-  if ((msg.content == "ping") && !msg.author.bot) {
+  if ((msg.content === ".ping") && !msg.author.bot) {
     msg.reply('Pong!');
   }else{return;}
 });
