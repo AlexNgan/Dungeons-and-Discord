@@ -76,7 +76,7 @@ function roll(min, max){
   result = Math.floor(Math.random() * (max - min + 1)) + min;
 
   if(max == result){
-    flair = ":tada:"
+    flair = " :tada:"
   }
 
   return "you've rolled " + result + flair;
