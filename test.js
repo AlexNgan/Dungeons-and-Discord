@@ -30,7 +30,7 @@ bot.on('message', msg => {
 var lennyList = ["(° ͜ʖ ͡°)", "(° 3 °)", "͡° ͜ʖ ͡–", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
   if(msg.content === "rady"){
   //Generates random number between 0 and the last array index.
-  var number = Math.floor(Math.random()*(lennyList.length - 1));
+  var number = Math.floor(Math.random()*(lennyList.length));
   msg.channel.send(lennyList[number]);
 }
 //END TEST ZONE.
