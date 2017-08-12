@@ -18,6 +18,8 @@ bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
   if (!msg.content.startsWith(config.prefix)||msg.author.bot) { return; }
 
+  msg.reply("Test Acknowlegded. I hear ya loud and clear, Captain.");
+
   if(msg.content.equals("hello dnd bot")==true){
     msg.reply("Hello, " + msg.author.id);
   }
