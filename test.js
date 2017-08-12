@@ -25,8 +25,7 @@ bot.on('message', msg => {
   if(msg.author.bot){return;}
   //PING PONG.
   if (msg.content === ".ping") {
-    const m = await msg.channel.send(".ping");
-    msg.reply("Pong! Your ping to my server is " + .createdTimestamp - m.createdTimestamp + " milliseconds.");
+    msg.reply("Pong! Your ping to my server is " + bot.ping + " milliseconds.");
   }
 
   if(msg.content === ".kill" && msg.author.id == config.ownerID){
