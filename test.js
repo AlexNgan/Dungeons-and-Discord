@@ -27,11 +27,11 @@ bot.on('message', msg => {
   }
 
 //TEST ZONE.
-var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
-  if(msg.content=== "rady"){
+var lennyList = ["(° ͜ʖ ͡°)", "(° 3 °)", "͡° ͜ʖ ͡–", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
+  if(msg.content === "rady"){
   //Generates random number between 0 and the last array index.
   var number = Math.floor(Math.random()*(lennyList.length - 1));
-  msg.send(lennyList[number]);
+  msg.channel.send(lennyList[number]);
 }
 //END TEST ZONE.
 
@@ -42,22 +42,6 @@ var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬
 
   else{return;}
 });
-
-//Called by dice code.
-function roll(min, max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  flair = "";
-  result = Math.floor(Math.random() * (max - min + 1)) + min;
-
-  if(max === result){
-    flair = ". :tada:";
-  } else if (result == 1) {
-    flair = ". Get rekt, scrub. :poop:";
-  } else{ return; }
-
-  return "you've rolled " + result + flair;
-}
 
 /*
   //New character function.
