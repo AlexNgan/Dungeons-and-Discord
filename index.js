@@ -20,22 +20,22 @@ bot.on('message', msg => {
 
   msg.reply("Test Acknowlegded. I hear ya loud and clear, Captain.");
 
-  if(msg.content.equals("hello dnd bot")==true){
+  if(msg.content==="hello dnd bot"){
     msg.reply("Hello, " + msg.author.id);
   }
 
   //Ping pong.
-  if(msg.content.startsWith(config.prefix + "ping")) {
+  if(msg.content === config.prefix + "ping")) {
     msg.reply('Pong!');
   }
 
   //KILL PROCESSES. ONLY BOT OWNER CAN RUN.
-  if (msg.content.startsWith(config.prefix) + 'kill' && msg.author.id == config.ownerID) {
+  if (msg.content === config.prefix + 'kill' && msg.author.id == config.ownerID) {
     process.exit();
     msg.reply("Process killed.");
   }
 
-  if(msg.content.equals("rady") == true){
+  if(msg.content==="rady"){
     //Command to troll RADYCAT.
     var lennyList = ["( ͡° ͜ʖ ͡° )", "( ͡° 3 ° )", "͡° ͜ʖ ͡ –", "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"];
 
