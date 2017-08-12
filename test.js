@@ -69,9 +69,9 @@ bot.on('message', msg => {
 });
 
 function roll(min, max){
-  //min = Math.ceil(min);
-//  max = Math.floor(max);
-  return "You've rolled " + Math.floor(Math.random() * (max - min + 1)) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return "you've rolled " + (Math.floor(Math.random() * (max - min + 1)) + min);
 }
 
 /*
