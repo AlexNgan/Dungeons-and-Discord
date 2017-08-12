@@ -13,7 +13,7 @@ const fs = require("fs");
 bot.on('ready', () => {
   bot.user.setGame(`TEST SCRIPT with ${bot.users.size} friends!`);
   //Channel ID, STRING.
-  bot.message('344950794912530432', "Dnd Bot, reporting for duty.");
+  bot.channel.send("Dnd Bot, reporting for duty.");
 });
 
 bot.on('message', msg => {
