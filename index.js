@@ -33,7 +33,7 @@ bot.on('message', msg => {
   }
 
   //To troll a friend.
-  var lennyList = ["( ͡° ͜ʖ ͡°)","(° 3 °)","͡° ͜ʖ ͡–","┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴","ᕕ( ͡° ͜ʖ ͡°)ᕗ"];
+  var lennyList = ["( ͡° ͜ʖ ͡°)","(° 3 °)","͡° ͜ʖ ͡–","┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴","ᕕ( ͡° ͜ʖ ͡°)ᕗ","( ͡° ͜ʖ ͡~)"];
   if(msg.content === "rady"){
     //Generates random number between 0 and the last array index.
     var number = Math.floor(Math.random()*(lennyList.length));
