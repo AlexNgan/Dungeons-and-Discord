@@ -81,7 +81,7 @@ function roll(min, max){
     flair = ". :tada:";
   } else if (result == 1) {
     flair = ". Get rekt, scrub. :poop:";
-  } else{ return; }
+  }
 
   return "you've rolled " + result + flair;
 }
