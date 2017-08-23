@@ -29,7 +29,7 @@ bot.on('message', msg => {
 
   //Displays versioning.
   if(msg.content === ".version"){
-    msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
+    msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version + "\nSource Code: https://github.com/Mortyyy/Dungeons-and-Discord");
   }
 
   //To troll a friend.
@@ -62,10 +62,12 @@ bot.on('message', msg => {
 
   //--------------- END DICE ----------------//
 
+/*
   //Command to register new character.
   if(msg.content === ".newcharacter"){
     makeNewCharacter();
   }
+*/
 
   else{return;}
 });
