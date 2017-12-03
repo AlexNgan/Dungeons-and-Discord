@@ -40,6 +40,12 @@ bot.on('message', msg => {
     msg.channel.send(lennyList[number]);
   }
 
+  var wakeUpList = ["before you go go", "when it's all over", "(can't wake up)"];
+  if(msg.content === "wake me up"){
+    var number = Math.floor(Math.random()*(wakeUpList.length));
+    msg.channel.send(wakeUpList[number]);
+  }
+
 //---------- WELCOME TO DICE CODE ----------//
 
   if(msg.content === ".d2"){msg.reply(roll(1,2));}
