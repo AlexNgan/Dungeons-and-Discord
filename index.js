@@ -40,7 +40,7 @@ bot.on('message', msg => {
     msg.channel.send(lennyList[number]);
   }
 
-  var wakeUpList = ["before you go go", "when it's all over", "(can't wake up)"];
+  var wakeUpList = ["before you go go", "when it's all over", "(can't wake up)", "inside", "bruh u already awake"];
   if(msg.content.toUpperCase() === "WAKE ME UP"){
     var number = Math.floor(Math.random()*(wakeUpList.length));
     msg.channel.send(wakeUpList[number]);
