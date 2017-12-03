@@ -34,14 +34,14 @@ bot.on('message', msg => {
 
   //To troll a friend.
   var lennyList = ["( ͡° ͜ʖ ͡°)","(° 3 °)","͡° ͜ʖ ͡–","┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴","ᕕ( ͡° ͜ʖ ͡°)ᕗ","( ͡° ͜ʖ ͡~)"];
-  if(msg.content === "rady"){
+  if(msg.content.toUpperCase() === "RADY"){
     //Generates random number between 0 and the last array index.
     var number = Math.floor(Math.random()*(lennyList.length));
     msg.channel.send(lennyList[number]);
   }
 
   var wakeUpList = ["before you go go", "when it's all over", "(can't wake up)"];
-  if(msg.content === "wake me up"){
+  if(msg.content.toUpperCase() === "WAKE ME UP"){
     var number = Math.floor(Math.random()*(wakeUpList.length));
     msg.channel.send(wakeUpList[number]);
   }
