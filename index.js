@@ -13,7 +13,7 @@ var characters;
 
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
-  bot.user.setGame("Chilling in Cedar Rapids with " + ${bot.users.size} + " friends!");
+  bot.user.setGame("Chilling in Cedar Rapids with  ${bot.users.size} friends!");
 });
 
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
