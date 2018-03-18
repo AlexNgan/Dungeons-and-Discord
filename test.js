@@ -8,7 +8,10 @@ const bot = new Discord.Client();
 const config = require("./config.json");  //Allows config details to be stored secretly
 const fs = require("fs");
 
-bot.user.setGame("Chilling in Cedar Rapids with  ${bot.users.size} friends!");
+//To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
+bot.on('ready', () => {
+  bot.user.setActivity("Chilling in Cedar Rapids with  ${bot.users.size} friends!");
+});
 
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
 
