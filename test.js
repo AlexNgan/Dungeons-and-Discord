@@ -8,6 +8,9 @@ const bot = new Discord.Client();
 const config = require("./config.json");  //Allows config details to be stored secretly
 const fs = require("fs");
 
+//Looks through emojis bot has access to and then sets the ID to constant.
+const eyes = bot.emojis.find("name", "eyes");
+
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
   //bot.user.setActivity("Chilling in Cedar Rapids with  ${bot.users.size} friends!");
@@ -24,7 +27,7 @@ bot.on('message', msg => {
   }
 
   // Create a reaction collector
-  const filter = (reaction) => reaction.emoji === '👀'
+  const filter = (reaction, user) => msg.reaction.emoji === '👀' && user.id === 'someID'
   msg.awaitReactions(filter, { time: 15000 })
     .then(collected => console.log(`Collected ${collected.size} reactions`))
     .catch(console.error);
