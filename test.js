@@ -16,7 +16,7 @@ bot.on('ready', () => {
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
 
 //Get and stores internal ID for the special emote.
-const eyes = client.emojis.find("name", "eyes");
+const eyes = guild.emojis.find("name", "eyes");
 
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
