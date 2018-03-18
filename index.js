@@ -22,6 +22,10 @@ console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
   if(!msg.content.startsWith(config.prefix) || msg.author.bot){return;}
+
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
   //PING PONG.
   if (msg.content.startsWith(config.prefix + "ping")) {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");

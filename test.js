@@ -30,6 +30,7 @@ bot.on('message', msg => {
   const filter = (reaction, user) => msg.reaction.emoji === '👀' && user.id === 'someID'
   msg.awaitReactions(filter, { time: 15000 })
     .then(collected => console.log(`Collected ${collected.size} reactions`))
+    msg.reply(`Collected ${collected.size} reactions`);
     .catch(console.error);
 });
 
