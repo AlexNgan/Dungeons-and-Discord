@@ -15,9 +15,6 @@ bot.on('ready', () => {
 
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
 
-//Get and stores internal ID for the special emote.
-const eyes = guild.emojis.find("name", "eyes");
-
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
   if(!msg.content.startsWith(config.prefix) || msg.author.bot){return;}
@@ -25,14 +22,15 @@ bot.on('message', msg => {
   if (msg.content.startsWith(config.prefix + "ping")) {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
+
+  // Create a reaction collector
+  const filter = (reaction) => reaction.emoji.name === '👀'
+  message.awaitReactions(filter, { time: 15000 })
+    .then(collected => console.log(`Collected ${collected.size} reactions`))
+    .catch(console.error);
 });
 
-bot.on('message', async message => {
-  await message.react(eyes);
-  console.log(message.reactions.find(eyes).count);
-  message.reply(message.reactions.find(eyes).count + " eyes AH HA HA.");
-});
-
+/*
 exports.run = (bot, message, args, level) => {
 message.channel.fetchMessages({limit: 1, around: args[0]})
     .then(messages=> {
@@ -71,5 +69,6 @@ message.channel.fetchMessages({limit: 1, around: args[0]})
         //message.channel.send('Message successfully added!')
     });
 };
+*/
 
 bot.login(config.token);  //Logs in bot by fetching token from config file.
