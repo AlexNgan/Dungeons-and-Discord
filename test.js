@@ -24,7 +24,7 @@ bot.on('message', msg => {
   }
 
   // Create a reaction collector
-  const filter = (reaction) => reaction.emoji.name === '👀'
+  const filter = (reaction) => reaction.emoji.name === 'eyes'
   msg.awaitReactions(filter, { time: 15000 })
     .then(collected => console.log(`Collected ${collected.size} reactions`))
     .catch(console.error);
