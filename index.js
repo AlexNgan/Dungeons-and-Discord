@@ -21,14 +21,14 @@ console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord
 //Message reply handled here.
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
-  if(msg.author.bot){return;}
+  if(!msg.content.startsWith(config.prefix) || msg.author.bot){return;}
   //PING PONG.
-  if (msg.content === ".ping") {
+  if (msg.content.startsWith(config.prefix + "ping")) {
     msg.reply("pong! Your ping to my server is " + Math.round(bot.ping) + " milliseconds.");
   }
 
   //Displays versioning.
-  if(msg.content === ".version"){
+  if(msg.content.startsWith(config.prefix + "version")){
     msg.reply("DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version + "\nSource Code: https://github.com/Mortyyy/Dungeons-and-Discord");
   }
 
@@ -53,23 +53,23 @@ bot.on('message', msg => {
 
 //---------- WELCOME TO DICE CODE ----------//
 
-  if(msg.content === ".d2"){msg.reply(roll(1,2));}
+  if(msg.content.startsWith(config.prefix + "d2")){msg.reply(roll(1,2));}
 
-  if(msg.content === ".d3"){msg.reply(roll(1,3));}
+  if(msg.content.startsWith(config.prefix + "d3")){msg.reply(roll(1,3));}
 
-  if(msg.content === ".d4"){msg.reply(roll(1,4));}
+  if(msg.content.startsWith(config.prefix + "d4")){msg.reply(roll(1,4));}
 
-  if(msg.content === ".d6"){msg.reply(roll(1,6));}
+  if(msg.content.startsWith(config.prefix + "d6")){msg.reply(roll(1,6));}
 
-  if(msg.content === ".d8"){msg.reply("wow a date, eh? " + roll(1,8));}
+  if(msg.content.startsWith(config.prefix) "d8")){msg.reply("wow a date, eh? " + roll(1,8));}
 
-  if(msg.content === ".d10"){msg.reply(roll(1,10));}
+  if(msg.content.startsWith(config.prefix) + "d10"){msg.reply(roll(1,10));}
 
-  if(msg.content === ".d12"){msg.reply(roll(1,12));}
+  if(msg.content.startsWith(config.prefix) + "d12"){msg.reply(roll(1,12));}
 
-  if(msg.content === ".d20"){msg.reply(roll(1,20));}
+  if(msg.content.startsWith(config.prefix) + "d20"){msg.reply(roll(1,20));}
 
-  if(msg.content === ".d100"){msg.reply(roll(1,100));}
+  if(msg.content.startsWith(config.prefix) + "d100"){msg.reply(roll(1,100));}
 
   //--------------- END DICE ----------------//
 
