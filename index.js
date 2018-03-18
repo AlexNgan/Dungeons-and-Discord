@@ -67,13 +67,13 @@ bot.on('message', msg => {
 
   if(msg.content.startsWith(config.prefix + "d8")){msg.reply("wow a date, eh? " + roll(1,8));}
 
-  if(msg.content.startsWith(config.prefix + "d10"){msg.reply(roll(1,10));}
+  if(msg.content.startsWith(config.prefix + "d10")){msg.reply(roll(1,10));}
 
-  if(msg.content.startsWith(config.prefix + "d12"){msg.reply(roll(1,12));}
+  if(msg.content.startsWith(config.prefix + "d12")){msg.reply(roll(1,12));}
 
-  if(msg.content.startsWith(config.prefix + "d20"){msg.reply(roll(1,20));}
+  if(msg.content.startsWith(config.prefix + "d20")){msg.reply(roll(1,20));}
 
-  if(msg.content.startsWith(config.prefix + "d100"){msg.reply(roll(1,100));}
+  if(msg.content.startsWith(config.prefix + "d100")){msg.reply(roll(1,100));}
 
   //--------------- END DICE ----------------//
 
