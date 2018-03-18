@@ -65,7 +65,7 @@ bot.on('message', msg => {
 
   if(msg.content.startsWith(config.prefix + "d6")){msg.reply(roll(1,6));}
 
-  if(msg.content.startsWith(config.prefix) "d8")){msg.reply("wow a date, eh? " + roll(1,8));}
+  if(msg.content.startsWith(config.prefix) + "d8")){msg.reply("wow a date, eh? " + roll(1,8));}
 
   if(msg.content.startsWith(config.prefix) + "d10"){msg.reply(roll(1,10));}
 
