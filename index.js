@@ -1,6 +1,6 @@
 /*
   index.js
-  Author: Alex (aka Morty)
+  Author: Logan (aka Morty)
 */
 
 const Discord = require('discord.js');  //bot runs on the Discord js module
