@@ -13,7 +13,8 @@ var characters;
 
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
-  bot.user.setGame("Chilling in Cedar Rapids with  ${bot.users.size} friends!");
+  console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
+  bot.user.setActivity(`with ${bot.user.size} friends`);
 });
 
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
@@ -21,10 +22,10 @@ console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord
 //Message reply handled here.
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
-  if(!msg.content.startsWith(config.prefix) || msg.author.bot){return;}
+  if(/*!msg.content.startsWith(config.prefix)*/ || msg.author.bot){return;}
 
-  const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
+  const args = msg.content.slice(config.prefix.length).trim().split(/ +/g); //Pulls off prefix and leaves just command and args.
+  const command = args.shift().toLowerCase(); //So capitalization shouldn't affect commands being read.
 
   //PING PONG.
   if (msg.content.startsWith(config.prefix + "ping")) {
@@ -94,12 +95,11 @@ function roll(min, max){
   flair = "";
   result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-  if(max === result){
+  if(max == result){
     flair = ". :tada:";
   } else if (result == 1) {
     flair = ". Get rekt, scrub. :poop:";
   }
-
   return "you've rolled " + result + flair;
 }
 
