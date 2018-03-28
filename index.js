@@ -22,7 +22,7 @@ console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord
 //Message reply handled here.
 bot.on('message', msg => {
   // Exit and stop if the prefix is not there or if user is a bot.
-  if(/*!msg.content.startsWith(config.prefix)*/ || msg.author.bot){return;}
+  if(/*!msg.content.startsWith(config.prefix) || */ msg.author.bot){return;}
 
   const args = msg.content.slice(config.prefix.length).trim().split(/ +/g); //Pulls off prefix and leaves just command and args.
   const command = args.shift().toLowerCase(); //So capitalization shouldn't affect commands being read.
