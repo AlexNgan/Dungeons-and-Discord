@@ -57,6 +57,9 @@ bot.on('message', msg => {
   }
 
 //---------- WELCOME TO DICE CODE ----------//
+  if(msg.content.startsWith(config.prefix + "d100")){msg.reply(roll(1,100)); return;}
+
+  if(msg.content.startsWith(config.prefix + "d20")){msg.reply(roll(1,20)); return;}
 
   if(msg.content.startsWith(config.prefix + "d2")){msg.reply(roll(1,2));}
 
@@ -71,10 +74,6 @@ bot.on('message', msg => {
   if(msg.content.startsWith(config.prefix + "d10")){msg.reply(roll(1,10));}
 
   if(msg.content.startsWith(config.prefix + "d12")){msg.reply(roll(1,12));}
-
-  if(msg.content.startsWith(config.prefix + "d20")){msg.reply(roll(1,20));}
-
-  if(msg.content.startsWith(config.prefix + "d100")){msg.reply(roll(1,100));}
 
   //--------------- END DICE ----------------//
 
