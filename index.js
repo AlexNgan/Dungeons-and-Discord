@@ -14,7 +14,7 @@ var characters;
 //To ensure that client  is ready. Small amount of time for discord.js to load its servers, users, etc.
 bot.on('ready', () => {
   console.log(`Bot has started, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
-  bot.user.setActivity(`with ${bot.user.size} friends`);
+  //bot.user.setActivity(`with ${bot.user.size} friends`);
 });
 
 console.log("Starting DiscordBot\nNode version: " + process.version + "\nDiscord.js version: " + Discord.version);
